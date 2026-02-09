@@ -1,15 +1,27 @@
 # Basic-harmonic-osilator
-The spring-mass motion digitally simulated in this project using the Eular method.
-##Physics Model Equation:
-x= -(k/m)x
-
-##Method:
-The differential equation is discretized using Eular's method.
-
-##Parameters:
-m= 1
-k= 1
+import numpy as np
+import matplotlib.pyplot as plt
+# Parameters
+m=1.0
+k=1.0
 dt= 0.01
-
-##Result:
-The system exhibits periodic oscillation. Increasing the spring constant increases the frequency.
+T= 20
+# times array
+t= np.arange(0, T, dt)
+# arrays
+x= np.zeros(len(t))
+v= np.zeros(len(t))
+# initial
+x[0]= 1.0
+v{0}= 0.0
+# Eular Method
+for i in range(len(t)-1)
+a= -(k/m)*x[i]
+v[i+1]= v[i]+ a*dt
+x[i+1]= x[i]+ v[i]*dt
+# grafik
+plt.plot(t, x)
+plt.xlabel("zaman (s)")
+plt.ylabel("konum (m)")
+plt.title("Basic Harmonic Oscillator")
+plt.show()
