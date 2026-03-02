@@ -8,10 +8,8 @@ k = 1.0
 dt = 0.01
 T = 20
 
-# Zaman dizisi
+# diziler
 t = np.arange(0, T, dt)
-
-# Diziler
 x = np.zeros(len(t))
 v = np.zeros(len(t))
 
